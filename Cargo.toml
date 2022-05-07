@@ -2,7 +2,23 @@
 name = "cwm"
 version = "0.1.0"
 edition = "2021"
+authors = ["CodeWuRen <codewuren@gmail.com>"]
+description = "A tiling window manager."
+include = [
+    "src/**/*",
+    "Cargo.toml",
+    "README.md"
+]
+keywords = [ "windowmanager", "window", "manager", "x11" ]
+categories = [ "window manager" ]
+autodir = true
 
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
 [dependencies]
+penrose = "0.2"
+simplelog = "0.8"
+
+[[bin]]
+name = "main"
+path = "src/main.rs"
